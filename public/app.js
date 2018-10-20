@@ -19,8 +19,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   if (blockstack.isUserSignedIn()) {
+    console.log("Username: " + userData.username);
+    console.log("appPrivateKey: " + userData.appPrivateKey);
+
+    authResponseToken = userData.authResponseToken;
+    console.log("authResponseToken: " + authResponseToken);
+
+    var decodedToken = blockstack.decodeToken(authResponseToken)
+    var publicKey = decodedToken.payload.public_keys[0] ;
+    console.log("publicKey: " + publicKey);
+
     var profile = blockstack.loadUserData().profile
-      showProfile(profile)
+    showProfile(profile);
   } else if (blockstack.isSignInPending()) {
     blockstack.handlePendingSignIn().then(function(userData) {
       window.location = window.location.origin
