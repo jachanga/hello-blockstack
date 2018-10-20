@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   if (blockstack.isUserSignedIn()) {
+    userData = blockstack.loadUserData();
     console.log("Username: " + userData.username);
     console.log("appPrivateKey: " + userData.appPrivateKey);
 
