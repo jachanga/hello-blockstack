@@ -1,4 +1,4 @@
-| :warning: IMPORTANT: This project has been deprecated in favor of [the Blockstack App](https://github.com/blockstack/ux/tree/master/packages/app). This project is not working anynore. |
+| :warning: IMPORTANT: This project has been deprecated in favor of [the Blockstack App](https://github.com/blockstack/ux/tree/master/packages/app). This project is not working. |
 
 
 # A simple application on Blockstack.  
